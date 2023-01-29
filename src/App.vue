@@ -1,30 +1,75 @@
-<template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+<template class="body">
+  <div class="body">
+    <headerVue />
+    <div class="main">
+      <asideVue />
+      <enterVue />
+    </div>
+    <footerVue />
+  </div>
 </template>
 
+<script>
+import headerVue from "./components/header.vue";
+import asideVue from "./components/aside.vue";
+import footerVue from "./components/footer.vue";
+import enterVue from "./components/enter.vue";
+
+export default {
+  components: {
+    headerVue,
+    asideVue,
+    footerVue,
+    enterVue,
+  },
+
+  data() {
+    return {
+      likes: 0,
+    };
+  },
+
+  METHODS: {},
+};
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: thick;
+  scrollbar-color: blue orange;
 }
 
-nav {
-  padding: 30px;
+*::-webkit-scrollbar {
+  height: 12px;
+  width: 15px;
+  background-color: black;
+}
+*::-webkit-scrollbar-track {
+  background: orange;
+  border-radius: 10px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(135, 31, 133);
+  border-radius: 5px;
+  border: 3px solid orange;
+  border-radius: 10px;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.body {
+  font-family: Helvetica;
+  background-image: url(./images/airport_dark.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 </style>

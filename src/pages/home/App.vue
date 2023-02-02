@@ -10,10 +10,10 @@
 </template>
 
 <script>
-import headerVue from "./components/header.vue";
-import asideVue from "./components/aside.vue";
-import footerVue from "./components/footer.vue";
-import enterVue from "./components/enter.vue";
+import headerVue from "../../components/header.vue";
+import asideVue from "../../components/aside.vue";
+import footerVue from "../../components/footer.vue";
+import enterVue from "../../components/enter.vue";
 
 export default {
   components: {
@@ -74,6 +74,7 @@ export default {
 
 .body {
   font-family: Helvetica;
+  background-image: url(../../images/airport_dark.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

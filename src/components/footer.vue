@@ -29,6 +29,16 @@ export default {
 </script>
 
 <style scoped>
+:root {
+  --white-blue: #b2dff2;
+  --brown: #995459;
+  --brown-trans: rgba(153, 84, 89, 0.5);
+  --white-orange: #fba692;
+  --white-yellow: #fed6a3;
+  --white-purple: #ae8a94;
+  --white-purple-trans: rgba(174, 138, 148, 0.5);
+}
+
 .footer {
   height: 15vh;
   padding: 10px;

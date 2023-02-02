@@ -21,6 +21,19 @@ export default {
 </script>
 
 <style scoped>
+:root {
+  --white-blue: #b2dff2;
+  --brown: #995459;
+  --brown-dark: #733f43;
+  --brown-trans: rgba(153, 84, 89, 0.5);
+  --white-orange: #fba692;
+  --white-orange-bright: #fe9882;
+  --white-yellow: #fed6a3;
+  --white-yellow-bright: #fcc47a;
+  --white-yellow-trans: rgba(254, 214, 163, 0.5);
+  --white-purple: #ae8a94;
+  --white-purple-trans: rgba(174, 138, 148, 0.5);
+}
 .back {
   position: relative;
   display: grid;
@@ -32,17 +45,10 @@ export default {
   width: 25vw;
   margin-left: 10px;
   margin-bottom: 5px;
-  background-color: rgba(179, 34, 145, 0.3);
+  background-color: var(--white-purple-trans);
   border-radius: 40px;
   background-attachment: fixed;
   backdrop-filter: blur(10px);
-}
-
-.back:hover {
-  background-color: rgba(254, 40, 204, 0.3);
-}
-
-.back__item {
 }
 
 .form {
@@ -67,27 +73,27 @@ input {
   border-radius: 10px;
   outline: none;
   padding: 0 16px;
-  border-color: rgb(194, 61, 255);
+  border-color: var(--white-orange);
   background: none;
-  box-shadow: 7px 5px 5px rgb(151, 40, 163);
+  box-shadow: 7px 5px 5px var(--white-orange-bright);
 }
 
 input:focus {
-  border-color: rgb(255, 0, 251);
-  box-shadow: 7px 5px 5px rgb(236, 61, 255);
+  border-color: var(--white-yellow);
+  box-shadow: 7px 5px 5px var(--white-yellow-bright);
 }
 
 input:focus + span {
-  color: rgb(236, 61, 255);
+  color: var(--white-yellow);
   font-size: 14px;
   text-align: center;
   font-weight: bold;
   left: 8px;
   top: -9px;
-  background-color: rgba(254, 40, 204, 1);
+  background-color: var(--white-yellow-bright);
   border-radius: 12px;
-  color: black;
-  width: 20%;
+  color: var(--brown-dark);
+  width: 21%;
 }
 
 label {
@@ -105,5 +111,6 @@ span {
   background: none;
   color: #fff;
   transition: all 0.3s ease-in-out;
+  width: 150px;
 }
 </style>

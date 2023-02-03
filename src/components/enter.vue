@@ -4,7 +4,7 @@
       <div class="button-box">
         <div ref="btn" id="btn"></div>
         <button type="button" class="toggle-button-l" @click="signUp">
-          Регестрация
+          Регистрация
         </button>
         <button type="button" class="toggle-button-r" @click="signIn">
           Вход

@@ -2,26 +2,27 @@
   <div class="back">
     <div class="form">
       <div class="title">Забронировать билет</div>
-      <div class="item_desc">ОТКУДА</div>
+
       <label id="from"
         ><input type="text" class="in-field" required /><span class="moved-span"
-          >ОТКУДА</span
+          >Откуда</span
         ></label
       >
-      <div class="item_desc">КУДА</div>
+
       <label id="to"
         ><input type="text" class="in-field" required /><span class="moved-span"
-          >КУДА</span
+          >Куда</span
         ></label
       >
       <div class="item_desc">ДАТА</div>
       <label id="departure_time"
         ><input type="date" class="in-field" required /><span></span
       ></label>
-      <div class="item_desc">ПАССАЖИРЫ</div>
+
       <label id="passenger_number"
-        ><input type="text" class="in-field" required /><span class="moved-span"
-          >i.e. 1</span
+        ><input type="text" class="in-field" required /><span
+          class="moved-span-long"
+          >Количество пассажиров</span
         ></label
       >
       <div class="item_desc">
@@ -160,7 +161,7 @@ export default {};
 
 .in-field {
   height: 50px;
-  width: 80%;
+  width: 90%;
   color: #fff;
   border-radius: 10px;
   outline: none;
@@ -185,7 +186,20 @@ export default {};
   background-color: var(--white-yellow-bright);
   border-radius: 12px;
   color: var(--brown-dark);
-  width: 21%;
+  width: 30%;
+}
+
+.in-field:focus + .moved-span-long {
+  color: var(--white-yellow);
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+  left: 8px;
+  top: -9px;
+  background-color: var(--white-yellow-bright);
+  border-radius: 12px;
+  color: var(--brown-dark);
+  width: 60%;
 }
 
 label {
@@ -203,7 +217,20 @@ label {
   background: none;
   color: #fff;
   transition: all 0.3s ease-in-out;
-  width: 150px;
+  width: 80%;
+}
+
+.moved-span-long {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 100;
+  position: absolute;
+  left: 16px;
+  top: 30%;
+  color: black;
+  background: none;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+  width: 80%;
 }
 
 .static-span {

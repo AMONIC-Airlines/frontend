@@ -48,7 +48,7 @@
           ></label
         >
         <label id="email"
-          ><input type="text" class="in-field" required /><span
+          ><input type="data" class="in-field" required /><span
             class="moved-span"
             >Дата рождения</span
           ></label
@@ -230,9 +230,11 @@ export default {
   padding: 10px 10px;
   cursor: pointer;
   margin: auto;
-  background: linear-gradient(to right,
-      var(--brown-trans),
-      var(--white-purple-trans));
+  background: linear-gradient(
+    to right,
+    var(--brown-trans),
+    var(--white-purple-trans)
+  );
   box-shadow: 0 0 20px 9px var(--white-orange-bright);
   outline: none;
   border: 0;
@@ -285,7 +287,7 @@ export default {
   box-shadow: 7px 5px 5px var(--white-yellow-bright);
 }
 
-.in-field:focus+.moved-span {
+.in-field:focus + .moved-span {
   color: var(--white-yellow);
   font-size: 14px;
   text-align: center;

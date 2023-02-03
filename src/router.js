@@ -4,7 +4,6 @@ import scheduleTable from './components/scheduleTable.vue'
 import bookingTable from './components/bookingTable.vue'
 import Register from './components/flightRegister.vue'
 import enter from './components/enter.vue'
-import test from './components/test.vue'
 import service from './components/addServiceTable.vue'
 
 const routes = [
@@ -23,10 +22,6 @@ const routes = [
     {
         path: "/table",
         component: scheduleTable,
-    },
-    {
-        path: "/test",
-        component: test,
     },
     {
         path: "/addservice",

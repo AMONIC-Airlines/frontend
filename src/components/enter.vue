@@ -126,6 +126,7 @@ export default {
       this.$refs.btn.style.left = "0%";
     },
     showUp() {
+      //функция для регистрации (не реализована, но связана с формой)
       console.log(this.signUpForm); //worked
       this.signUpForm.email = "";
       this.signUpForm.name = "";
@@ -135,6 +136,7 @@ export default {
       this.signUpForm.passwordRep = "";
     },
     showIn() {
+      //функция для входа (не реализована, но связана с формой)
       console.log(this.signInForm); //worked
       this.signInForm.email = "";
       this.signInForm.password = "";

@@ -8,6 +8,9 @@
 
     <ul class="side__section">
       <li class="side__item_l">
+        <a class="side__item_l" href="#/schedule">Расписание</a>
+      </li>
+      <li class="side__item_l">
         <a class="side__item_l" href="#">Забронировать билет</a>
       </li>
       <li class="side__item_l">

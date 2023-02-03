@@ -2,25 +2,22 @@
   <div class="body">
     <headerVue />
     <div class="main">
-      <asideVue />
-      <enterVue />
+      <router-view></router-view>
     </div>
     <footerVue />
   </div>
 </template>
 
 <script>
-import headerVue from "../../components/header.vue";
-import asideVue from "../../components/aside.vue";
-import footerVue from "../../components/footer.vue";
-import enterVue from "../../components/enter.vue";
+import homeVue from "./components/home.vue";
+import headerVue from "./components/header.vue";
+import footerVue from "./components/footer.vue";
 
 export default {
   components: {
     headerVue,
-    asideVue,
     footerVue,
-    enterVue,
+    homeVue,
   },
 
   data() {
@@ -60,7 +57,7 @@ export default {
 
 .body {
   font-family: Helvetica;
-  background-image: url(../../images/airport_dark.jpg);
+  background-image: url(./images/airport_dark.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -69,6 +66,7 @@ export default {
 
 .main {
   display: flex;
+  height: 100vh;
   flex-direction: row;
   justify-content: space-between;
 }

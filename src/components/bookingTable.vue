@@ -1,17 +1,35 @@
 <template>
   <div class="back">
     <div class="form">
-      <div class="title">Авторизация</div>
-      <label id="email"><input class="info_input" type="text" /><span>Email</span></label>
-      <label id="password"><input class="info_input" type="password" /><span>Password</span></label>
+      <div class="title">Забронировать билет</div>
+      <div class="item_desc">ОТКУДА</div>
+      <label id="from"><input class="info_input" type="text" /><span>ОТКУДА</span></label>
+      <div class="item_desc">КУДА</div>
+      <label id="to"><input class="info_input" type="text" /><span>КУДА</span></label>
+      <div class="item_desc">ДАТА</div>
+      <label id="departure_time"><input type="date" /><span></span></label>
+      <div class="item_desc">ПАССАЖИРЫ</div>
+      <label id="passenger_number"><input class="info_input" type="text" /><span>i.e. 1</span></label>
+      <input type="checkbox" id="business_class" name="business_class" value="Bike" />
+      <label for="vehicle1"> I have a bike</label><br>
+      <input type="submit" value="ПОДТВЕРДИТЬ" />
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {};
+  setup() {
+    const schedules = computed(() => {
+      return {
+        time,
+        from,
+        to
+      }
+    });
+    return {
+      schedules
+    };
   },
 
   METHODS: {},
@@ -36,12 +54,7 @@ export default {
   backdrop-filter: blur(10px);
 }
 
-.back:hover {
-  background-color: rgba(254, 40, 204, 0.3);
-}
-
-.back__item {
-}
+.back__item {}
 
 .form {
   display: grid;
@@ -55,7 +68,14 @@ export default {
   margin-left: 17%;
   color: #fff;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 100;
+  font-weight: bold;
+}
+
+.item_desc {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  margin-left: 10px;
+  color: #fff;
 }
 
 .info_input {
@@ -73,19 +93,6 @@ export default {
 .info_input:focus {
   border-color: rgb(255, 0, 251);
   box-shadow: 7px 5px 5px rgb(236, 61, 255);
-}
-
-.info_input:focus + span {
-  color: rgb(236, 61, 255);
-  font-size: 14px;
-  text-align: center;
-  font-weight: bold;
-  left: 8px;
-  top: -9px;
-  background-color: rgba(254, 40, 204, 1);
-  border-radius: 12px;
-  color: black;
-  width: 20%;
 }
 
 label {

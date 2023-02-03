@@ -47,7 +47,7 @@ export default {};
   align-items: center;
   justify-items: center;
   top: 5%;
-  height: 65vh;
+  height: 78vh;
   width: 25vw;
   transform: translate(-50%, 0%);
   background-color: var(--white-purple-trans);

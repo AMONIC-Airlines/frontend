@@ -53,6 +53,7 @@ export default createRouter({
         { path: '/schedule', component: Schedule },
         { path: '/booking', component: Booking },
         { path: '/register_flight', component: Register },
+        { path: '/register_flight/additional_service', component: AddService },
     ]
 })
 */

@@ -12,6 +12,7 @@
 <script>
 import homeVue from "./components/home.vue";
 import headerVue from "./components/header.vue";
+import asideVue from "./components/aside.vue";
 import footerVue from "./components/footer.vue";
 import scheduleVue from "./components/scheduleTable.vue";
 import asideVue from "./components/aside.vue";
@@ -93,6 +94,7 @@ export default {
 
 .main {
   display: flex;
+  height: 90vh;
   flex-direction: row;
   justify-content: space-between;
 }

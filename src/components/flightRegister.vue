@@ -11,10 +11,10 @@
     <table class="table">
       <tbody>
         <tr>
-          <th>Рейс</th>
-          <th>Время</th>
-          <th>Из</th>
-          <th>Куда</th>
+          <th style="width: fit-content">Рейс</th>
+          <th style="width: fit-content">Время</th>
+          <th style="width: fit-content">Из</th>
+          <th style="width: fit-content">Куда</th>
           <th></th>
         </tr>
         <tr v-for="schedule in filteredFlight">

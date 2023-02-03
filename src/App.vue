@@ -84,6 +84,7 @@ export default {
 
 .main {
   display: flex;
+  height: 90vh;
   flex-direction: row;
   justify-content: space-between;
 }

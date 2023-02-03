@@ -16,12 +16,6 @@
       <li class="side__item_l">
         <a class="side__item_l" href="#/register_flight">Регистрация на рейс</a>
       </li>
-      <li class="side__item_l">
-        <a class="side__item_l" href="#/register_flight/additional_service">Дополнительные услуги</a>
-      </li>
-      <li class="side__item_l">
-        <a class="side__item_l" href="#">Техническая поддержка</a>
-      </li>
     </ul>
   </div>
 </template>

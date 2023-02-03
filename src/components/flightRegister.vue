@@ -1,5 +1,4 @@
 <template>
-  <h1 class="title">aaa</h1>
   <div class="back">
     <div class="title">Регистрация</div>
     <div class="form-group mt-4 mb-2">
@@ -36,6 +35,21 @@
 
 <script>
 export default {
+  data() {
+    return {
+      filteredFlight: [
+        {
+          flight: "fbo",
+          time: "hehe",
+          from: "L",
+          to: "M",
+        },
+      ],
+    };
+  },
+
+  methods: {},
+  /*
   setup() {
     const schedules = computed(() => {
       return {
@@ -53,7 +67,7 @@ export default {
       searchString,
       select_flight,
     };
-  },
+  },*/
 };
 </script>
 

@@ -5,7 +5,6 @@
       <asideVue />
       <RouterView></RouterView>
     </div>
-
     <footerVue />
   </div>
 </template>

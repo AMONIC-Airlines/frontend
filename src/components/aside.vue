@@ -8,7 +8,7 @@
 
     <ul class="side__section">
       <li class="side__item_l">
-        <RouterLink class="side__item_l" to="/service">Расписание</RouterLink>
+        <RouterLink class="side__item_l" to="/table">Расписание</RouterLink>
       </li>
       <li class="side__item_l">
         <RouterLink class="side__item_l" to="/booking"
@@ -16,13 +16,9 @@
         >
       </li>
       <li class="side__item_l">
-        <a class="side__item_l" href="#">Регистрация на рейс</a>
-      </li>
-      <li class="side__item_l">
-        <a class="side__item_l" href="#">Дополнительные услуги</a>
-      </li>
-      <li class="side__item_l">
-        <a class="side__item_l" href="#">Техническая поддержка</a>
+        <RouterLink class="side__item_l" to="/Register"
+          >Регистрация на рейс</RouterLink
+        >
       </li>
     </ul>
   </div>

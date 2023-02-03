@@ -1,12 +1,12 @@
 <template>
-  <div class="back">
+  <div ref="back" v-bind:class="class">
     <div class="form">
       <div class="button-box">
         <div ref="btn" id="btn"></div>
-        <button type="button" class="toggle-button" @click="signUp">
+        <button type="button" class="toggle-button-l" @click="signUp">
           sign up
         </button>
-        <button type="button" class="toggle-button" @click="signIn">
+        <button type="button" class="toggle-button-r" @click="signIn">
           sign in
         </button>
       </div>
@@ -23,10 +23,6 @@
             >Password</span
           ></label
         >
-        <div class="check-group">
-          <input type="checkbox" class="check-box" />
-          <span class="static-span">Запомнить пароль</span>
-        </div>
         <div class="right">
           <button type="submit" class="submit-btn">sign in</button>
         </div>
@@ -36,25 +32,39 @@
         <label id="email"
           ><input type="text" class="in-field" required /><span
             class="moved-span"
-            >Login</span
+            >Почта</span
           ></label
         >
         <label id="email"
           ><input type="text" class="in-field" required /><span
             class="moved-span"
-            >Email</span
+            >Имя</span
+          ></label
+        >
+        <label id="email"
+          ><input type="text" class="in-field" required /><span
+            class="moved-span"
+            >Фамилия</span
+          ></label
+        >
+        <label id="email"
+          ><input type="text" class="in-field" required /><span
+            class="moved-span"
+            >Дата рождения</span
           ></label
         >
         <label id="password"
           ><input type="password" class="in-field" required /><span
             class="moved-span"
-            >Password</span
+            >Пароль</span
           ></label
         >
-        <div class="check-group">
-          <input type="checkbox" class="check-box" />
-          <span class="static-span">Оставаться в системе</span>
-        </div>
+        <label id="password"
+          ><input type="password" class="in-field" required /><span
+            class="moved-span"
+            >Повторите пароль</span
+          ></label
+        >
         <div class="right">
           <button type="submit" class="submit-btn">sign up</button>
         </div>
@@ -68,15 +78,18 @@ export default {
   data() {
     return {
       visibleIn: true,
+      class: "small-back",
     };
   },
 
   methods: {
     signIn() {
+      this.class = "small-back";
       this.visibleIn = true;
       this.$refs.btn.style.left = "50%";
     },
     signUp() {
+      this.class = "back";
       this.visibleIn = false;
       this.$refs.btn.style.left = "0%";
     },
@@ -103,9 +116,26 @@ export default {
   display: grid;
   align-items: center;
   justify-items: center;
-  top: 12vh;
+  top: 3vh;
   right: 5vw;
-  height: 65vh;
+  height: 80vh;
+  width: 25vw;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  background-color: var(--white-purple-trans);
+  border-radius: 40px;
+  background-attachment: fixed;
+  backdrop-filter: blur(10px);
+}
+
+.small-back {
+  position: relative;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  top: 3vh;
+  right: 5vw;
+  height: 45vh;
   width: 25vw;
   margin-left: 10px;
   margin-bottom: 5px;
@@ -116,6 +146,7 @@ export default {
 }
 
 .form {
+  top: 1vh;
   display: grid;
   width: 85%;
   margin-left: 15%;
@@ -162,7 +193,19 @@ export default {
   box-shadow: 0 0 20px 9px var(--white-yellow-bright);
 }
 
-.toggle-button {
+.toggle-button-l {
+  font-size: 18px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 100;
+  color: white;
+  padding: 10px 30px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+}
+.toggle-button-r {
   font-size: 18px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 100;
@@ -252,7 +295,7 @@ export default {
   background-color: var(--white-yellow-bright);
   border-radius: 12px;
   color: var(--brown-dark);
-  width: 21%;
+  width: 42%;
 }
 
 label {
@@ -284,5 +327,6 @@ label {
 .right {
   position: relative;
   left: 18%;
+  top: 1vh;
 }
 </style>

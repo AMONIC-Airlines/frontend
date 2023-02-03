@@ -3,10 +3,10 @@
     <div class="form">
       <div class="button-box">
         <div ref="btn" id="btn"></div>
-        <button type="button" class="toggle-button" @click="signUp">
+        <button type="button" class="toggle-button-l" @click="signUp">
           sign up
         </button>
-        <button type="button" class="toggle-button" @click="signIn">
+        <button type="button" class="toggle-button-r" @click="signIn">
           sign in
         </button>
       </div>
@@ -133,19 +133,15 @@ export default {
 }
 
 .sign-in {
+  top: 5%;
   display: grid;
   position: relative;
 }
 
 .sign-up {
+  top: 5%;
   display: grid;
   position: relative;
-  /*
-  width: 40vh;
-  top: 7.45vh;
-  right: 45vh;
-  position: absolute;
-  */
 }
 
 .button-box {
@@ -162,7 +158,20 @@ export default {
   box-shadow: 0 0 20px 9px var(--white-yellow-bright);
 }
 
-.toggle-button {
+.toggle-button-l {
+  font-size: 18px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 100;
+  color: white;
+  padding: 10px 30px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+}
+
+.toggle-button-r {
   font-size: 18px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 100;
@@ -284,5 +293,6 @@ label {
 .right {
   position: relative;
   left: 18%;
+  top: 5%;
 }
 </style>

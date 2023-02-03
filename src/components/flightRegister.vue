@@ -107,7 +107,7 @@ export default {
   align-items: center;
   justify-items: center;
   right: 10%;
-  height: 80vh;
+  height: 100vh;
   width: 50vw;
   background-color: var(--white-purple-trans);
   border-radius: 40px;
@@ -126,6 +126,7 @@ export default {
 }
 
 .search_comp {
+  width: 18%;
   margin: 15px;
 }
 

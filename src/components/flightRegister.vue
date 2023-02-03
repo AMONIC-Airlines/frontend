@@ -102,7 +102,6 @@ export default {
     --white-purple: #ae8a94;
     --white-purple-trans: rgba(174, 138, 148, 0.5);
 }
-
 .back {
   position: relative;
   align-items: center;
@@ -115,7 +114,6 @@ export default {
   background-attachment: fixed;
   backdrop-filter: blur(10px);
 }
-
 .title {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;

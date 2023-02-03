@@ -11,24 +11,60 @@
         </button>
       </div>
       <div ref="SI" class="sign-in" v-if="visibleIn">
-        <label id="email"><input type="text" class="in-field" required /><span class="moved-span">Login</span></label>
-        <label id="password"><input type="password" class="in-field" required /><span
-            class="moved-span">Password</span></label>
+        <label id="email"
+          ><input type="text" class="in-field" required /><span
+            class="moved-span"
+            >Login</span
+          ></label
+        >
+        <label id="password"
+          ><input type="password" class="in-field" required /><span
+            class="moved-span"
+            >Password</span
+          ></label
+        >
         <div class="right">
           <button type="submit" class="submit-btn">sign in</button>
         </div>
       </div>
 
       <div ref="SU" class="sign-up" v-if="!visibleIn">
-        <label id="email"><input type="text" class="in-field" required /><span class="moved-span">Почта</span></label>
-        <label id="email"><input type="text" class="in-field" required /><span class="moved-span">Имя</span></label>
-        <label id="email"><input type="text" class="in-field" required /><span class="moved-span">Фамилия</span></label>
-        <label id="email"><input type="text" class="in-field" required /><span class="moved-span">Дата
-            рождения</span></label>
-        <label id="password"><input type="password" class="in-field" required /><span
-            class="moved-span">Пароль</span></label>
-        <label id="password"><input type="password" class="in-field" required /><span class="moved-span">Повторите
-            пароль</span></label>
+        <label id="email"
+          ><input type="text" class="in-field" required /><span
+            class="moved-span"
+            >Почта</span
+          ></label
+        >
+        <label id="email"
+          ><input type="text" class="in-field" required /><span
+            class="moved-span"
+            >Имя</span
+          ></label
+        >
+        <label id="email"
+          ><input type="text" class="in-field" required /><span
+            class="moved-span"
+            >Фамилия</span
+          ></label
+        >
+        <label id="email"
+          ><input type="text" class="in-field" required /><span
+            class="moved-span"
+            >Дата рождения</span
+          ></label
+        >
+        <label id="password"
+          ><input type="password" class="in-field" required /><span
+            class="moved-span"
+            >Пароль</span
+          ></label
+        >
+        <label id="password"
+          ><input type="password" class="in-field" required /><span
+            class="moved-span"
+            >Повторите пароль</span
+          ></label
+        >
         <div class="right">
           <button type="submit" class="submit-btn">sign up</button>
         </div>
@@ -82,7 +118,7 @@ export default {
   align-items: center;
   justify-items: center;
   top: 3vh;
-  right: 15vw;
+  right: 5vw;
   height: 80vh;
   width: 25vw;
   margin-left: 10px;
@@ -99,7 +135,7 @@ export default {
   align-items: center;
   justify-items: center;
   top: 3vh;
-  right: 15vw;
+  right: 5vw;
   height: 45vh;
   width: 25vw;
   margin-left: 10px;

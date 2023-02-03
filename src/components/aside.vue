@@ -8,10 +8,12 @@
 
     <ul class="side__section">
       <li class="side__item_l">
-        <a class="side__item_l" href="#/schedule">Расписание</a>
+        <RouterLink class="side__item_l" to="/table">Расписание</RouterLink>
       </li>
       <li class="side__item_l">
-        <a class="side__item_l" href="#/booking">Забронировать билет</a>
+        <RouterLink class="side__item_l" to="/booking"
+          >Забронировать билет</RouterLink
+        >
       </li>
       <li class="side__item_l">
         <a class="side__item_l" href="#/register_flight">Регистрация на рейс</a>

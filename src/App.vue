@@ -1,9 +1,9 @@
-<template class="body">
+<template>
   <div class="body">
     <headerVue />
     <div class="main">
       <asideVue />
-      <router-view></router-view>
+      <RouterView></RouterView>
     </div>
     <footerVue />
   </div>
@@ -14,13 +14,19 @@ import homeVue from "./components/home.vue";
 import headerVue from "./components/header.vue";
 import asideVue from "./components/aside.vue";
 import footerVue from "./components/footer.vue";
+import scheduleVue from "./components/scheduleTable.vue";
+import enterVue from "./components/enter.vue";
+import bookingTable from "./components/bookingTable.vue";
 
 export default {
   components: {
-    headerVue,
     asideVue,
+    headerVue,
+    enterVue,
     footerVue,
     homeVue,
+    scheduleVue,
+    bookingTable,
   },
 
   data() {

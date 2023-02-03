@@ -3,15 +3,31 @@
     <div class="form">
       <div class="title">Забронировать билет</div>
       <div class="item_desc">ОТКУДА</div>
-      <label id="from"><input type="text" class="in-field" required /><span class="moved-span">ОТКУДА</span></label>
+      <label id="from"
+        ><input type="text" class="in-field" required /><span class="moved-span"
+          >ОТКУДА</span
+        ></label
+      >
       <div class="item_desc">КУДА</div>
-      <label id="to"><input type="text" class="in-field" required /><span class="moved-span">КУДА</span></label>
+      <label id="to"
+        ><input type="text" class="in-field" required /><span class="moved-span"
+          >КУДА</span
+        ></label
+      >
       <div class="item_desc">ДАТА</div>
-      <label id="departure_time"><input type="date" class="in-field" required /><span></span></label>
+      <label id="departure_time"
+        ><input type="date" class="in-field" required /><span></span
+      ></label>
       <div class="item_desc">ПАССАЖИРЫ</div>
-      <label id="passenger_number"><input type="text" class="in-field" required /><span class="moved-span">i.e. 1</span></label>
+      <label id="passenger_number"
+        ><input type="text" class="in-field" required /><span class="moved-span"
+          >i.e. 1</span
+        ></label
+      >
       <div class="item_desc">
-        <label id="business_class"><input type="checkbox" /> Business Class</label><br>
+        <label id="business_class"
+          ><input type="checkbox" /> Business Class</label
+        ><br />
       </div>
       <div class="right">
         <a href="#"><button type="submit" class="submit-btn">Submit</button></a>
@@ -21,9 +37,7 @@
 </template>
 
 <script>
-export default {
-  
-};
+export default {};
 </script>
 
 <style scoped>
@@ -104,9 +118,11 @@ export default {
   align-self: left;
   padding: 10px 10px;
   cursor: pointer;
-  background: linear-gradient(to right,
-      var(--brown-trans),
-      var(--white-purple-trans));
+  background: linear-gradient(
+    to right,
+    var(--brown-trans),
+    var(--white-purple-trans)
+  );
   box-shadow: 0 0 20px 9px var(--white-orange-bright);
   outline: none;
   border: 0;
@@ -159,7 +175,7 @@ export default {
   box-shadow: 7px 5px 5px var(--white-yellow-bright);
 }
 
-.in-field:focus+.moved-span {
+.in-field:focus + .moved-span {
   color: var(--white-yellow);
   font-size: 14px;
   text-align: center;

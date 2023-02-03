@@ -5,34 +5,42 @@
       <table>
         <tbody>
           <tr>
-            <th style="width: 5%; text-align: start;"></th>
-            <th style="width: 40%; text-align: start;">Услуга</th>
-            <th style="width: 20%; text-align: start;">Стоимость</th>
+            <th style="width: 5%; text-align: start"></th>
+            <th style="width: 40%; text-align: start">Услуга</th>
+            <th style="width: 20%; text-align: start">Стоимость</th>
             <th style="width: fit-content">Кол</th>
           </tr>
           <tr>
             <td><input id="service_check" type="checkbox" /></td>
             <td>Бифстейк</td>
             <td>500 руб</td>
-            <td style="text-align: center;"><input type="number" value="0"/></td>
+            <td style="text-align: center">
+              <input type="number" value="0" />
+            </td>
           </tr>
           <tr>
             <td><input id="service_check" type="checkbox" /></td>
             <td>Американо</td>
             <td>100 руб</td>
-            <td style="text-align: center;"><input type="number" value="0" /></td>
+            <td style="text-align: center">
+              <input type="number" value="0" />
+            </td>
           </tr>
           <tr>
             <td><input id="service_check" type="checkbox" /></td>
             <td>Латте</td>
             <td>100 руб</td>
-            <td style="text-align: center;"><input type="number" value="0" /></td>
+            <td style="text-align: center">
+              <input type="number" value="0" />
+            </td>
           </tr>
           <tr>
             <td><input id="service_check" type="checkbox" /></td>
             <td>Макиатто</td>
             <td>100 руб</td>
-            <td style="text-align: center;"><input type="number" value="0" /></td>
+            <td style="text-align: center">
+              <input type="number" value="0" />
+            </td>
           </tr>
           
         </tbody>
@@ -46,8 +54,12 @@
 
 <script>
 export default {
-
-}
+  data() {
+    return {
+      schedules: [{}],
+    };
+  },
+};
 </script>
 
 <style scoped>
@@ -100,16 +112,17 @@ table {
   border-spacing: 0 2em;
 }
 
-input[type=number] {
+input[type="number"] {
   height: 25px;
   width: 50%;
 }
 
-input[type=number]::-webkit-inner-spin-button {
+input[type="number"]::-webkit-inner-spin-button {
   opacity: 1;
 }
 
-th, td {
+th,
+td {
   font-size: 20px;
   color: #fff;
 }
@@ -124,9 +137,11 @@ th, td {
   align-self: left;
   padding: 10px 10px;
   cursor: pointer;
-  background: linear-gradient(to right,
-      var(--brown-trans),
-      var(--white-purple-trans));
+  background: linear-gradient(
+    to right,
+    var(--brown-trans),
+    var(--white-purple-trans)
+  );
   box-shadow: 0 0 20px 9px var(--white-orange-bright);
   outline: none;
   border: 0;

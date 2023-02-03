@@ -1,9 +1,45 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHistory } from "vue-router"
 import Home from './components/home.vue'
-import Schedule from './components/scheduleTable.vue'
-import Booking from './components/bookingTable.vue'
+import scheduleTable from './components/scheduleTable.vue'
+import bookingTable from './components/bookingTable.vue'
 import Register from './components/flightRegister.vue'
-import AddService from './components/addServiceTable.vue'
+import enter from './components/enter.vue'
+import service from './components/addServiceTable.vue'
+
+const routes = [
+    {
+        path: "/",
+        component: enter,
+    },
+    {
+        path: "/Register",
+        component: Register,
+    },
+    {
+        path: "/booking",
+        component: bookingTable,
+    },
+    {
+        path: "/table",
+        component: scheduleTable,
+    },
+    {
+        path: "/addservice",
+        component: service,
+    }
+]
+
+const router = createRouter({
+    routes,
+    history: createWebHistory()
+})
+
+export default router
+
+/*
+import { createRouter, createWebHashHistory } from 'vue-router'
+
+
 
 export default createRouter({
     history: createWebHashHistory(),
@@ -15,3 +51,4 @@ export default createRouter({
         { path: '/register_flight/additional_service', component: AddService },
     ]
 })
+*/

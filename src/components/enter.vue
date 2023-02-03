@@ -4,27 +4,27 @@
       <div class="button-box">
         <div ref="btn" id="btn"></div>
         <button type="button" class="toggle-button-l" @click="signUp">
-          sign up
+          Регестрация
         </button>
         <button type="button" class="toggle-button-r" @click="signIn">
-          sign in
+          Вход
         </button>
       </div>
       <div ref="SI" class="sign-in" v-if="visibleIn">
         <label id="email"
           ><input type="text" class="in-field" required /><span
             class="moved-span"
-            >Login</span
+            >Почта</span
           ></label
         >
         <label id="password"
           ><input type="password" class="in-field" required /><span
             class="moved-span"
-            >Password</span
+            >Пароль</span
           ></label
         >
         <div class="right">
-          <button type="submit" class="submit-btn">sign in</button>
+          <button type="submit" class="submit-btn">Войти</button>
         </div>
       </div>
 
@@ -66,7 +66,7 @@
           ></label
         >
         <div class="right">
-          <button type="submit" class="submit-btn">sign up</button>
+          <button type="submit" class="submit-btn">Присоединиться</button>
         </div>
       </div>
     </div>
@@ -199,7 +199,7 @@ export default {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 100;
   color: white;
-  padding: 10px 30px;
+  left: 5%;
   cursor: pointer;
   background: transparent;
   border: 0;
@@ -218,6 +218,7 @@ export default {
   border: 0;
   outline: none;
   position: relative;
+  left: 13%;
 }
 
 .submit-btn {

@@ -1,7 +1,7 @@
 <template>
   <div class="back">
     <div class="title">Регистрация на рейс</div>
-    <div style="position: relative; display: flex; top: 15%; left: 10%;">
+    <div style="position: relative; display: flex; top: 15%; left: 10%">
       <div class="search_comp">
         <div class="item_desc">Рейс</div>
         <input type="text" class="in-field" required />
@@ -15,7 +15,9 @@
         <input type="text" class="in-field" required />
       </div>
       <div style="margin-left: 20px">
-        <a style="position: relative; top: 40%"><button type="submit" class="submit-btn">Search</button></a>
+        <a style="position: relative; top: 40%"
+          ><button type="submit" class="submit-btn">Найти</button></a
+        >
       </div>
     </div>
     <div class="table">
@@ -33,9 +35,11 @@
             <td>{{ schedule.time }}</td>
             <td>{{ schedule.from }}</td>
             <td>{{ schedule.to }}</td>
-            <td style="justify-items: center;">
+            <td style="justify-items: center">
               <div>
-                <a href="#"><button type="submit" class="submit-btn">Выбрать</button></a>
+                <a href="#"
+                  ><button type="submit" class="submit-btn">Выбрать</button></a
+                >
               </div>
             </td>
           </tr>
@@ -84,23 +88,23 @@ export default {
     };
   },
 
-  methods() { },
-}
+  methods() {},
+};
 </script>
 
 <style scoped>
 :root {
-    --white-blue: #b2dff2;
-    --brown: #995459;
-    --brown-dark: #733f43;
-    --brown-trans: rgba(153, 84, 89, 0.5);
-    --white-orange: #fba692;
-    --white-orange-bright: #fe9882;
-    --white-yellow: #fed6a3;
-    --white-yellow-bright: #fcc47a;
-    --white-yellow-trans: rgba(254, 214, 163, 0.5);
-    --white-purple: #ae8a94;
-    --white-purple-trans: rgba(174, 138, 148, 0.5);
+  --white-blue: #b2dff2;
+  --brown: #995459;
+  --brown-dark: #733f43;
+  --brown-trans: rgba(153, 84, 89, 0.5);
+  --white-orange: #fba692;
+  --white-orange-bright: #fe9882;
+  --white-yellow: #fed6a3;
+  --white-yellow-bright: #fcc47a;
+  --white-yellow-trans: rgba(254, 214, 163, 0.5);
+  --white-purple: #ae8a94;
+  --white-purple-trans: rgba(174, 138, 148, 0.5);
 }
 .back {
   position: relative;
@@ -138,12 +142,14 @@ export default {
   top: 20%;
 }
 
-th, td {
+th,
+td {
   border-bottom: 1px solid;
   padding: 10px;
 }
 
-th, td {
+th,
+td {
   font-size: 20px;
   color: #fff;
 }
@@ -183,9 +189,11 @@ th, td {
   margin-top: 5px;
   padding: 10px 10px;
   cursor: pointer;
-  background: linear-gradient(to right,
-      var(--brown-trans),
-      var(--white-purple-trans));
+  background: linear-gradient(
+    to right,
+    var(--brown-trans),
+    var(--white-purple-trans)
+  );
   box-shadow: 0 0 10px 4px var(--white-orange-bright);
   outline: none;
   border: 0;
@@ -196,7 +204,7 @@ th, td {
   box-shadow: 0 0 10px 4px var(--white-yellow-bright);
 }
 
-.in-field:focus+.moved-span {
+.in-field:focus + .moved-span {
   color: var(--white-yellow);
   font-size: 14px;
   text-align: center;

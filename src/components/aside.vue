@@ -37,6 +37,16 @@ export default {
 </script>
 
 <style scoped>
+:root {
+  --white-blue: #b2dff2;
+  --brown: #995459;
+  --brown-trans: rgba(153, 84, 89, 0.5);
+  --white-orange: #fba692;
+  --white-yellow: #fed6a3;
+  --white-purple: #ae8a94;
+  --white-purple-trans: rgba(174, 138, 148, 0.5);
+}
+
 .sideBar {
   position: relative;
   display: flex;
@@ -47,14 +57,10 @@ export default {
   width: 31vw;
   margin-left: 10px;
   margin-bottom: 5px;
-  background-color: rgba(255, 182, 193, 0.3);
+  background-color: var(--white-purple-trans);
   border-radius: 40px;
   background-attachment: fixed;
   backdrop-filter: blur(10px);
-}
-
-.sideBar:hover {
-  background-color: rgba(252, 140, 157, 0.3);
 }
 
 .side__section {
@@ -77,17 +83,17 @@ export default {
   font-family: Arial, Helvetica, sans-serif;
   text-align: left;
   line-height: 50px;
-  color: #ffffff;
+  color: var(--white-orange);
   font-size: 26px;
   width: 80%;
   text-decoration: underline;
 }
 li.side__item_l:hover {
-  color: orange;
+  color: var(--white-yellow);
 }
 
 a.side__item_l:hover {
-  text-decoration: underline orange;
+  text-decoration: underline var(--white-yellow);
 }
 
 .side__button {
@@ -100,7 +106,7 @@ a.side__item_l:hover {
   backdrop-filter: blur(4px);
   border: none;
   border-radius: 10px;
-  border-color: orange;
+  border-color: var(--white-yellow);
   padding: 15px;
   margin: 5px;
 }
@@ -122,7 +128,7 @@ a.side__item_l:hover {
 }
 
 .HH {
-  color: orange;
+  color: var(--white-yellow);
   font-size: 30px;
 }
 </style>

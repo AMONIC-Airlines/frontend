@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <div class="header__img__section">
-      <a href="#"><img id="img" class="header__img" src="../images/DS2017_TP09_black.png" /></a>
+      <RouterLink to="/"><img id="img" class="header__img" src="../images/DS2017_TP09_black.png" /></RouterLink>
     </div>
     <div class="header__margin_right">
       <div class="header__section">

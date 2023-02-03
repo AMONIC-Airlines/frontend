@@ -16,7 +16,7 @@
         >
       </li>
       <li class="side__item_l">
-        <a class="side__item_l" href="#/register_flight">Регистрация на рейс</a>
+        <a class="side__item_l" href="/register_flight">Регистрация на рейс</a>
       </li>
     </ul>
   </div>

@@ -6,13 +6,12 @@ import Register from './components/flightRegister.vue'
 import enter from './components/enter.vue'
 import service from './components/addServiceTable.vue'
 
-const routes = [
-    {
+const routes = [{
         path: "/",
         component: enter,
     },
     {
-        path: "/Register",
+        path: "/register",
         component: Register,
     },
     {

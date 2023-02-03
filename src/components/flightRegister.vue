@@ -1,17 +1,20 @@
 <template>
-  <h1 class="title" style="position: absolute; left: 50%; color: white;">aaa</h1>
   <div class="back">
     <div class="title">Регистрация</div>
     <div class="form-group mt-4 mb-2">
-      <input v-model="searchString" class="form-control form-control-sm" placeholder="Flight search" />
+      <input
+        v-model="searchString"
+        class="form-control form-control-sm"
+        placeholder="Flight search"
+      />
     </div>
     <table class="table">
       <tbody>
         <tr>
-          <th style="width:fit-content">Рейс</th>
-          <th style="width:fit-content">Время</th>
-          <th style="width:fit-content">Из</th>
-          <th style="width:fit-content">Куда</th>
+          <th style="width: fit-content">Рейс</th>
+          <th style="width: fit-content">Время</th>
+          <th style="width: fit-content">Из</th>
+          <th style="width: fit-content">Куда</th>
           <th></th>
         </tr>
         <tr v-for="schedule in filteredFlight">
@@ -20,7 +23,9 @@
           <td>{{ schedule.from }}</td>
           <td>{{ schedule.to }}</td>
           <td>
-            <a class="select_flight_btn" href="/additional_service">Выбрать</a>
+            <a class="select_flight_btn" @click="select_flight(schedule.flight)"
+              >Выбрать</a
+            >
           </td>
         </tr>
       </tbody>
@@ -30,33 +35,40 @@
 
 <script>
 export default {
+  data() {
+    return {
+      filteredFlight: [
+        {
+          flight: "fbo",
+          time: "hehe",
+          from: "L",
+          to: "M",
+        },
+      ],
+    };
+  },
+
+  methods: {},
+  /*
   setup() {
     const schedules = computed(() => {
       return {
         flight,
         time,
         from,
-        to
-      }
-    })
-
-    const select_flight = flight => {
-
-    }
-
-    const searchString = ref('')
-
-    const filteredFlight = computed(() => {
-
-    })
-
+        to,
+      };
+    });
+    const select_flight = (flight) => {};
+    const searchString = ref("");
+    const filteredFlight = computed(() => {});
     return {
       filteredFlight,
       searchString,
-      select_flight
-    }
-  }
-}
+      select_flight,
+    };
+  },*/
+};
 </script>
 
 <style scoped>
@@ -73,7 +85,6 @@ export default {
   --white-purple: #ae8a94;
   --white-purple-trans: rgba(174, 138, 148, 0.5);
 }
-
 .back {
   position: relative;
   display: grid;
@@ -90,7 +101,6 @@ export default {
   background-attachment: fixed;
   backdrop-filter: blur(10px);
 }
-
 .title {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;

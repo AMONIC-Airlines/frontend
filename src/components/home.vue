@@ -1,5 +1,4 @@
 <template>
-<asideVue />
 <enterVue />
 </template>
 

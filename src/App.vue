@@ -31,6 +31,20 @@ export default {
 </script>
 
 <style>
+:root {
+  --white-blue: #b2dff2;
+  --brown: #995459;
+  --brown-dark: #733f43;
+  --brown-trans: rgba(153, 84, 89, 0.5);
+  --white-orange: #fba692;
+  --white-orange-bright: #fe9882;
+  --white-yellow: #fed6a3;
+  --white-yellow-bright: #fcc47a;
+  --white-yellow-trans: rgba(254, 214, 163, 0.5);
+  --white-purple: #ae8a94;
+  --white-purple-trans: rgba(174, 138, 148, 0.5);
+}
+
 * {
   margin: 0;
   padding: 0;

@@ -15,7 +15,6 @@ import headerVue from "./components/header.vue";
 import asideVue from "./components/aside.vue";
 import footerVue from "./components/footer.vue";
 import scheduleVue from "./components/scheduleTable.vue";
-import asideVue from "./components/aside.vue";
 import enterVue from "./components/enter.vue";
 import bookingTable from "./components/bookingTable.vue";
 

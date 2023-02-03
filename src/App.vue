@@ -10,32 +10,25 @@
 </template>
 
 <script>
-import homeVue from "./components/home.vue";
 import headerVue from "./components/header.vue";
 import asideVue from "./components/aside.vue";
 import footerVue from "./components/footer.vue";
-import scheduleVue from "./components/scheduleTable.vue";
-import enterVue from "./components/enter.vue";
-import bookingTable from "./components/bookingTable.vue";
 
 export default {
   components: {
     asideVue,
     headerVue,
-    enterVue,
     footerVue,
-    homeVue,
-    scheduleVue,
-    bookingTable,
   },
 
   data() {
-    return {
-      likes: 0,
-    };
+    return {};
   },
 
-  METHODS: {},
+  methods: {
+    signIn() {},
+    signUp() {},
+  },
 };
 </script>
 

@@ -12,61 +12,81 @@
       </div>
       <div ref="SI" class="sign-in" v-if="visibleIn">
         <label id="email"
-          ><input type="text" class="in-field" required /><span
-            class="moved-span"
-            >Почта</span
-          ></label
+          ><input
+            type="text"
+            class="in-field"
+            v-model="signInForm.email"
+            required
+          /><span class="moved-span">Почта</span></label
         >
         <label id="password"
-          ><input type="password" class="in-field" required /><span
-            class="moved-span"
-            >Пароль</span
-          ></label
+          ><input
+            type="password"
+            class="in-field"
+            v-model="signInForm.password"
+            required
+          /><span class="moved-span">Пароль</span></label
         >
         <div class="right">
-          <button type="submit" class="submit-btn">Войти</button>
+          <button type="submit" class="submit-btn" @click="showIn">
+            Войти
+          </button>
         </div>
       </div>
 
       <div ref="SU" class="sign-up" v-if="!visibleIn">
         <label id="email"
-          ><input type="text" class="in-field" required /><span
-            class="moved-span"
-            >Почта</span
-          ></label
+          ><input
+            type="text"
+            class="in-field"
+            v-model="signUpForm.email"
+            required
+          /><span class="moved-span">Почта</span></label
         >
         <label id="email"
-          ><input type="text" class="in-field" required /><span
-            class="moved-span"
-            >Имя</span
-          ></label
+          ><input
+            type="text"
+            class="in-field"
+            v-model="signUpForm.name"
+            required
+          /><span class="moved-span">Имя</span></label
         >
         <label id="email"
-          ><input type="text" class="in-field" required /><span
-            class="moved-span"
-            >Фамилия</span
-          ></label
+          ><input
+            type="text"
+            class="in-field"
+            v-model="signUpForm.surname"
+            required
+          /><span class="moved-span">Фамилия</span></label
         >
         <label id="email"
-          ><input type="date" class="in-field" required /><span
-            class="moved-span-date"
-            >Дата рождения</span
-          ></label
+          ><input
+            type="date"
+            class="in-field"
+            v-model="signUpForm.dateOfBirth"
+            required
+          /><span class="moved-span-date">Дата рождения</span></label
         >
         <label id="password"
-          ><input type="password" class="in-field" required /><span
-            class="moved-span"
-            >Пароль</span
-          ></label
+          ><input
+            type="password"
+            class="in-field"
+            v-model="signUpForm.password"
+            required
+          /><span class="moved-span">Пароль</span></label
         >
         <label id="password"
-          ><input type="password" class="in-field" required /><span
-            class="moved-span"
-            >Повторите пароль</span
-          ></label
+          ><input
+            type="password"
+            class="in-field"
+            v-model="signUpForm.passwordRep"
+            required
+          /><span class="moved-span">Повторите пароль</span></label
         >
         <div class="right">
-          <button type="submit" class="submit-btn">Присоединиться</button>
+          <button type="submit" class="submit-btn" @click="showUp">
+            Присоединиться
+          </button>
         </div>
       </div>
     </div>
@@ -77,6 +97,18 @@
 export default {
   data() {
     return {
+      signInForm: {
+        email: "",
+        password: "",
+      },
+      signUpForm: {
+        email: "",
+        name: "",
+        surname: "",
+        dateOfBirth: "",
+        password: "",
+        passwordRep: "",
+      },
       visibleIn: true,
       class: "small-back",
     };
@@ -92,6 +124,20 @@ export default {
       this.class = "back";
       this.visibleIn = false;
       this.$refs.btn.style.left = "0%";
+    },
+    showUp() {
+      console.log(this.signUpForm); //worked
+      this.signUpForm.email = "";
+      this.signUpForm.name = "";
+      this.signUpForm.surname = "";
+      this.signUpForm.dateOfBirth = "";
+      this.signUpForm.password = "";
+      this.signUpForm.passwordRep = "";
+    },
+    showIn() {
+      console.log(this.signInForm); //worked
+      this.signInForm.email = "";
+      this.signInForm.password = "";
     },
   },
 };
@@ -165,11 +211,13 @@ export default {
 }
 
 .sign-in {
+  top: 2vh;
   display: grid;
   position: relative;
 }
 
 .sign-up {
+  top: 2vh;
   display: grid;
   position: relative;
   /*
@@ -288,7 +336,7 @@ export default {
   box-shadow: 7px 5px 5px var(--white-yellow-bright);
 }
 
-.in-field:focus + .moved-span {
+.in-field + .moved-span {
   color: var(--white-yellow);
   font-size: 14px;
   text-align: center;

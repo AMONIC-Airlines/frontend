@@ -2,45 +2,80 @@
   <div class="back">
     <div class="form">
       <div class="title">Забронировать билет</div>
-
       <label id="from"
-        ><input type="text" class="in-field" required /><span class="moved-span"
-          >Откуда</span
-        ></label
+        ><input
+          type="text"
+          class="in-field"
+          v-model="bookForm.from"
+          required
+        /><span class="moved-span">Откуда</span></label
       >
-
       <label id="to"
-        ><input type="text" class="in-field" required /><span class="moved-span"
-          >Куда</span
-        ></label
+        ><input
+          type="text"
+          class="in-field"
+          v-model="bookForm.to"
+          required
+        /><span class="moved-span">Куда</span></label
       >
       <label id="departure_time"
-        ><input type="date" class="in-field" required /><span
-          class="moved-span-date"
-          >Дата</span
-        ></label
+        ><input
+          type="date"
+          class="in-field"
+          v-model="bookForm.date"
+          required
+        /><span class="moved-span-date">Дата</span></label
       >
-
       <label id="passenger_number"
-        ><input type="text" class="in-field" required /><span
-          class="moved-span-long"
-          >Количество пассажиров</span
-        ></label
+        ><input
+          type="text"
+          class="in-field"
+          v-model="bookForm.passangerNum"
+          required
+        /><span class="moved-span-long">Количество пассажиров</span></label
       >
       <div class="item_desc">
         <label id="business_class"
-          ><input type="checkbox" /> Бизнесс класс</label
+          ><input type="checkbox" v-model="bookForm.businessСlass" /> Бизнесс
+          класс</label
         ><br />
       </div>
       <div class="right">
-        <a href="#"><button type="submit" class="submit-btn">Submit</button></a>
+        <a href="#"
+          ><button type="submit" class="submit-btn" @click="book">
+            Забронировать
+          </button></a
+        >
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      bookForm: {
+        from: "",
+        to: "",
+        date: "",
+        passangerNum: "",
+        businessСlass: "",
+      },
+    };
+  },
+
+  methods: {
+    book() {
+      console.log(this.bookForm); //worked
+      this.bookForm.from = "";
+      this.bookForm.to = "";
+      this.bookForm.date = "";
+      this.bookForm.passangerNum = "";
+      this.bookForm.businessСlass = "";
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -178,7 +213,7 @@ export default {};
   box-shadow: 7px 5px 5px var(--white-yellow-bright);
 }
 
-.in-field:focus + .moved-span {
+.in-field + .moved-span {
   color: var(--white-yellow);
   font-size: 14px;
   text-align: center;
@@ -203,7 +238,7 @@ export default {};
   width: 42%;
 }
 
-.in-field:focus + .moved-span-long {
+.in-field + .moved-span-long {
   color: var(--white-yellow);
   font-size: 14px;
   text-align: center;

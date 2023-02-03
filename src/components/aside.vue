@@ -16,9 +16,7 @@
         >
       </li>
       <li class="side__item_l">
-        <RouterLink class="side__item_l" to="/Register"
-          >Регистрация на рейс</RouterLink
-        >
+        <a class="side__item_l" href="#/register_flight">Регистрация на рейс</a>
       </li>
     </ul>
   </div>

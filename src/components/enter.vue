@@ -111,6 +111,7 @@ export default {
   --white-purple: #ae8a94;
   --white-purple-trans: rgba(174, 138, 148, 0.5);
 }
+
 .back {
   position: relative;
   display: grid;
@@ -205,6 +206,7 @@ export default {
   outline: none;
   position: relative;
 }
+
 .toggle-button-r {
   font-size: 18px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -228,11 +230,9 @@ export default {
   padding: 10px 10px;
   cursor: pointer;
   margin: auto;
-  background: linear-gradient(
-    to right,
-    var(--brown-trans),
-    var(--white-purple-trans)
-  );
+  background: linear-gradient(to right,
+      var(--brown-trans),
+      var(--white-purple-trans));
   box-shadow: 0 0 20px 9px var(--white-orange-bright);
   outline: none;
   border: 0;
@@ -285,7 +285,7 @@ export default {
   box-shadow: 7px 5px 5px var(--white-yellow-bright);
 }
 
-.in-field:focus + .moved-span {
+.in-field:focus+.moved-span {
   color: var(--white-yellow);
   font-size: 14px;
   text-align: center;
@@ -324,6 +324,7 @@ label {
   color: white;
   margin: 10px 10px;
 }
+
 .right {
   position: relative;
   left: 18%;

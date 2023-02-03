@@ -30,7 +30,7 @@
         ><br />
       </div>
       <div class="right">
-        <button type="submit" class="submit-btn">Submit</button>
+        <a href="#"><button type="submit" class="submit-btn">Submit</button></a>
       </div>
     </div>
   </div>
@@ -46,7 +46,7 @@ export default {};
   display: grid;
   align-items: center;
   justify-items: center;
-  top: 10%;
+  top: 5%;
   height: 65vh;
   width: 25vw;
   transform: translate(-50%, 0%);

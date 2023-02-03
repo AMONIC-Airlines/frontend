@@ -42,6 +42,7 @@
               <input type="number" value="0" />
             </td>
           </tr>
+          
         </tbody>
       </table>
       <div class="right">
@@ -95,7 +96,7 @@ export default {
   width: 85%;
   margin-left: 10%;
   position: relative;
-  bottom: 20%;
+  top: -15%;
 }
 
 .title {

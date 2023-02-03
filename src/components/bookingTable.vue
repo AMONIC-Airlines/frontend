@@ -3,36 +3,28 @@
     <div class="form">
       <div class="title">Забронировать билет</div>
       <div class="item_desc">ОТКУДА</div>
-      <label id="from"><input class="info_input" type="text" /><span>ОТКУДА</span></label>
+      <label id="from"
+        ><input class="info_input" type="text" /><span>ОТКУДА</span></label
+      >
       <div class="item_desc">КУДА</div>
-      <label id="to"><input class="info_input" type="text" /><span>КУДА</span></label>
+      <label id="to"
+        ><input class="info_input" type="text" /><span>КУДА</span></label
+      >
       <div class="item_desc">ДАТА</div>
       <label id="departure_time"><input type="date" /><span></span></label>
       <div class="item_desc">ПАССАЖИРЫ</div>
-      <label id="passenger_number"><input class="info_input" type="text" /><span>i.e. 1</span></label>
-      <label id="business_class"><input type="checkbox" /> Business Class</label><br>
+      <label id="passenger_number"
+        ><input class="info_input" type="text" /><span>i.e. 1</span></label
+      >
+      <label id="business_class"><input type="checkbox" /> Business Class</label
+      ><br />
       <input type="submit" class="submit_btn" value="ПОДТВЕРДИТЬ" />
     </div>
   </div>
 </template>
 
 <script>
-export default {
-  setup() {
-    const schedules = computed(() => {
-      return {
-        time,
-        from,
-        to
-      }
-    });
-    return {
-      schedules
-    };
-  },
-
-  METHODS: {},
-};
+export default {};
 </script>
 
 <style scoped>
@@ -53,7 +45,8 @@ export default {
   backdrop-filter: blur(10px);
 }
 
-.back__item {}
+.back__item {
+}
 
 .form {
   display: grid;

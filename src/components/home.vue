@@ -1,19 +1,15 @@
 <template>
-<asideVue />
-<enterVue />
+  <asideVue />
+  <enterVue />
 </template>
 
 <script>
-import headerVue from "./header.vue";
 import asideVue from "./aside.vue";
-import footerVue from "./footer.vue";
 import enterVue from "./enter.vue";
 
 export default {
   components: {
-    headerVue,
     asideVue,
-    footerVue,
     enterVue,
   },
 
@@ -26,3 +22,5 @@ export default {
   METHODS: {},
 };
 </script>
+
+<style scoped></style>

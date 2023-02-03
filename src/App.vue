@@ -1,9 +1,11 @@
-<template class="body">
+<template>
   <div class="body">
     <headerVue />
     <div class="main">
-      <router-view></router-view>
+      <asideVue />
+      <RouterView></RouterView>
     </div>
+
     <footerVue />
   </div>
 </template>
@@ -12,12 +14,20 @@
 import homeVue from "./components/home.vue";
 import headerVue from "./components/header.vue";
 import footerVue from "./components/footer.vue";
+import scheduleVue from "./components/scheduleTable.vue";
+import asideVue from "./components/aside.vue";
+import enterVue from "./components/enter.vue";
+import bookingTable from "./components/bookingTable.vue";
 
 export default {
   components: {
+    asideVue,
     headerVue,
+    enterVue,
     footerVue,
     homeVue,
+    scheduleVue,
+    bookingTable,
   },
 
   data() {

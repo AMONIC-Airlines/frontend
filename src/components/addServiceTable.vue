@@ -1,5 +1,4 @@
 <template>
-  <h1 class="title">aaa</h1>
   <div class="back">
     <div class="title">Допольнительные услуги</div>
 
@@ -12,6 +11,7 @@
           <td>Куда</td>
           <td></td>
         </tr>
+
         <tr v-for="schedule in schedules">
           <td>{{ schedule.flight }}</td>
           <td>{{ schedule.time }}</td>
@@ -28,8 +28,12 @@
 
 <script>
 export default {
-
-}
+  data() {
+    return {
+      schedules: [{}],
+    };
+  },
+};
 </script>
 
 <style scoped>

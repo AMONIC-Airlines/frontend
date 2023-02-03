@@ -67,7 +67,7 @@ export default {};
 .title {
   font-size: 24px;
   margin-bottom: 16px;
-  margin-left: 17%;
+  margin-left: 6%;
   color: #fff;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 100;

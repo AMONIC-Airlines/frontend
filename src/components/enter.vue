@@ -48,8 +48,8 @@
           ></label
         >
         <label id="email"
-          ><input type="data" class="in-field" required /><span
-            class="moved-span"
+          ><input type="date" class="in-field" required /><span
+            class="moved-span-date"
             >Дата рождения</span
           ></label
         >
@@ -301,12 +301,38 @@ export default {
   width: 42%;
 }
 
+.in-field + .moved-span-date {
+  color: var(--white-yellow);
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+  left: 8px;
+  top: -9px;
+  background-color: var(--white-yellow-bright);
+  border-radius: 12px;
+  color: var(--brown-dark);
+  width: 42%;
+}
+
 label {
   position: relative;
   margin-bottom: 16px;
 }
 
 .moved-span {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 100;
+  position: absolute;
+  left: 16px;
+  top: 30%;
+  color: black;
+  background: none;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+  width: 150px;
+}
+
+.moved-span-date {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 100;
   position: absolute;

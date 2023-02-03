@@ -14,10 +14,12 @@
           >Куда</span
         ></label
       >
-      <div class="item_desc">ДАТА</div>
       <label id="departure_time"
-        ><input type="date" class="in-field" required /><span></span
-      ></label>
+        ><input type="date" class="in-field" required /><span
+          class="moved-span-date"
+          >Дата</span
+        ></label
+      >
 
       <label id="passenger_number"
         ><input type="text" class="in-field" required /><span
@@ -27,7 +29,7 @@
       >
       <div class="item_desc">
         <label id="business_class"
-          ><input type="checkbox" /> Business Class</label
+          ><input type="checkbox" /> Бизнесс класс</label
         ><br />
       </div>
       <div class="right">
@@ -188,6 +190,18 @@ export default {};
   color: var(--brown-dark);
   width: 30%;
 }
+.in-field + .moved-span-date {
+  color: var(--white-yellow);
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+  left: 8px;
+  top: -9px;
+  background-color: var(--white-yellow-bright);
+  border-radius: 12px;
+  color: var(--brown-dark);
+  width: 42%;
+}
 
 .in-field:focus + .moved-span-long {
   color: var(--white-yellow);
@@ -208,6 +222,19 @@ label {
 }
 
 .moved-span {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 100;
+  position: absolute;
+  left: 16px;
+  top: 30%;
+  color: black;
+  background: none;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+  width: 80%;
+}
+
+.moved-span-date {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 100;
   position: absolute;

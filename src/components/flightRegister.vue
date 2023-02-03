@@ -1,5 +1,5 @@
 <template>
-  <h1 class="title">aaa</h1>
+  <h1 class="title" style="position: absolute; left: 50%; color: white;">aaa</h1>
   <div class="back">
     <div class="title">Регистрация</div>
     <div class="form-group mt-4 mb-2">
@@ -8,10 +8,10 @@
     <table class="table">
       <tbody>
         <tr>
-          <th>Рейс</th>
-          <th>Время</th>
-          <th>Из</th>
-          <th>Куда</th>
+          <th style="width:fit-content">Рейс</th>
+          <th style="width:fit-content">Время</th>
+          <th style="width:fit-content">Из</th>
+          <th style="width:fit-content">Куда</th>
           <th></th>
         </tr>
         <tr v-for="schedule in filteredFlight">
@@ -20,7 +20,7 @@
           <td>{{ schedule.from }}</td>
           <td>{{ schedule.to }}</td>
           <td>
-            <a class="select_flight_btn" @click="select_flight(schedule.flight)">Выбрать</a>
+            <a class="select_flight_btn" href="/additional_service">Выбрать</a>
           </td>
         </tr>
       </tbody>

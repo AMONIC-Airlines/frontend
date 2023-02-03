@@ -3,35 +3,26 @@
     <div class="form">
       <div class="title">Забронировать билет</div>
       <div class="item_desc">ОТКУДА</div>
-      <label id="from"><input class="info_input" type="text" /><span>ОТКУДА</span></label>
+      <label id="from"><input type="text" class="in-field" required /><span class="moved-span">ОТКУДА</span></label>
       <div class="item_desc">КУДА</div>
-      <label id="to"><input class="info_input" type="text" /><span>КУДА</span></label>
+      <label id="to"><input type="text" class="in-field" required /><span class="moved-span">КУДА</span></label>
       <div class="item_desc">ДАТА</div>
-      <label id="departure_time"><input type="date" /><span></span></label>
+      <label id="departure_time"><input type="date" class="in-field" required /><span></span></label>
       <div class="item_desc">ПАССАЖИРЫ</div>
-      <label id="passenger_number"><input class="info_input" type="text" /><span>i.e. 1</span></label>
-      <label id="business_class"><input type="checkbox" /> Business Class</label><br>
-      <input type="submit" class="submit_btn" value="ПОДТВЕРДИТЬ" />
+      <label id="passenger_number"><input type="text" class="in-field" required /><span class="moved-span">i.e. 1</span></label>
+      <div class="item_desc">
+        <label id="business_class"><input type="checkbox" /> Business Class</label><br>
+      </div>
+      <div class="right">
+        <button type="submit" class="submit-btn">Submit</button>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  setup() {
-    const schedules = computed(() => {
-      return {
-        time,
-        from,
-        to
-      }
-    });
-    return {
-      schedules
-    };
-  },
-
-  METHODS: {},
+  
 };
 </script>
 
@@ -41,24 +32,22 @@ export default {
   display: grid;
   align-items: center;
   justify-items: center;
-  top: 12vh;
-  right: 5vw;
-  height: 55vh;
+  top: 10%;
+  height: 65vh;
   width: 25vw;
-  margin-left: 10px;
-  margin-bottom: 5px;
-  background-color: rgba(179, 34, 145, 0.3);
+  transform: translate(-50%, 0%);
+  background-color: var(--white-purple-trans);
   border-radius: 40px;
   background-attachment: fixed;
   backdrop-filter: blur(10px);
 }
 
-.back__item {}
-
 .form {
   display: grid;
   width: 85%;
   margin-left: 15%;
+  position: relative;
+  bottom: 5%;
 }
 
 .title {
@@ -67,31 +56,120 @@ export default {
   margin-left: 17%;
   color: #fff;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: bold;
+  font-weight: 100;
 }
 
 .item_desc {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 20px;
+  font-size: 15px;
   margin-left: 10px;
+  margin-bottom: 5px;
   color: #fff;
 }
 
-.info_input {
+.button-box {
+  margin: 6px auto;
+  position: relative;
+  border-radius: 30px;
+  width: 75%;
+  box-shadow: 0 0 20px 9px var(--white-orange-bright);
+  right: 10%;
+  bottom: 15%;
+}
+
+.button-box:active {
+  box-shadow: 0 0 20px 9px var(--white-yellow-bright);
+}
+
+.toggle-button {
+  font-size: 18px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 100;
+  color: white;
+  padding: 10px 30px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+}
+
+.submit-btn {
+  width: 50%;
+  font-size: 18px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 100;
+  color: white;
+  margin-top: 20px;
+  align-self: left;
+  padding: 10px 10px;
+  cursor: pointer;
+  background: linear-gradient(to right,
+      var(--brown-trans),
+      var(--white-purple-trans));
+  box-shadow: 0 0 20px 9px var(--white-orange-bright);
+  outline: none;
+  border: 0;
+  border-radius: 30px;
+}
+
+.submit-btn:active {
+  box-shadow: 0 0 20px 9px var(--white-yellow-bright);
+}
+
+#btn {
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  left: 50%;
+  border-radius: 30px;
+  background: linear-gradient(to right, var(--brown), var(--white-purple));
+  transition: 0.5s;
+  position: absolute;
+}
+
+.check-box {
+  display: flex;
+  right: 100px;
+  margin: 10px 10px 10px 0;
+  background-color: black;
+}
+
+.check-group {
+  transition: 0.5s;
+  display: flex;
+  margin: 10px;
+}
+
+.in-field {
   height: 50px;
   width: 80%;
   color: #fff;
   border-radius: 10px;
   outline: none;
   padding: 0 16px;
-  border-color: rgb(194, 61, 255);
+  border-color: var(--white-orange);
   background: none;
-  box-shadow: 7px 5px 5px rgb(151, 40, 163);
+  box-shadow: 7px 5px 5px var(--white-orange-bright);
 }
 
-.info_input:focus {
-  border-color: rgb(255, 0, 251);
-  box-shadow: 7px 5px 5px rgb(236, 61, 255);
+.in-field:focus {
+  border-color: var(--white-yellow);
+  box-shadow: 7px 5px 5px var(--white-yellow-bright);
+}
+
+.in-field:focus+.moved-span {
+  color: var(--white-yellow);
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+  left: 8px;
+  top: -9px;
+  background-color: var(--white-yellow-bright);
+  border-radius: 12px;
+  color: var(--brown-dark);
+  width: 21%;
 }
 
 label {
@@ -99,7 +177,7 @@ label {
   margin-bottom: 16px;
 }
 
-span {
+.moved-span {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 100;
   position: absolute;
@@ -109,5 +187,20 @@ span {
   background: none;
   color: #fff;
   transition: all 0.3s ease-in-out;
+  width: 150px;
+}
+
+.static-span {
+  position: relative;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 100;
+  font-size: 16px;
+  color: white;
+  margin: 10px 10px;
+}
+
+.right {
+  position: relative;
+  left: 18%;
 }
 </style>

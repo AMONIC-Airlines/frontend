@@ -1,23 +1,24 @@
 <template>
-  <h1 class="title">aaa</h1>
-<div class="back">
-  <div class="title">Расписание</div>
+  <div class="back">
+    <div class="title">Расписание</div>
 
-  <table class="table">
-    <tbody>
-      <tr>
-        <th>Время</th>
-        <th>Из</th>
-        <th>Куда</th>
-      </tr>
-      <tr v-for="schedule in schedules">
-        <td>{{ schedule.time }}</td>
-        <td>{{ schedule.from }}</td>
-        <td>{{ schedule.to }}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+    <table class="table">
+      <tbody>
+        <tr>
+          <th>Рейс</th>
+          <th>Время</th>
+          <th>Из</th>
+          <th>Куда</th>
+        </tr>
+        <tr v-for="schedule in schedules">
+          <td>{{ schedule.flight }}</td>
+          <td>{{ schedule.time }}</td>
+          <td>{{ schedule.from }}</td>
+          <td>{{ schedule.to }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </template>
 
 <script>
@@ -25,6 +26,7 @@ export default {
   setup() {
     const schedules = computed(() => {
       return {
+        flight,
         time,
         from,
         to
@@ -57,13 +59,12 @@ export default {
   display: grid;
   align-items: center;
   justify-items: center;
-  top: 12vh;
-  right: 5vw;
-  height: 55vh;
+  top: 10%;
+  left: 50%;
+  height: 65vh;
   width: 25vw;
-  margin-left: 10px;
-  margin-bottom: 5px;
-  background-color: rgba(179, 34, 145, 0.3);
+  transform: translate(-50%, 0%);
+  background-color: var(--white-purple-trans);
   border-radius: 40px;
   background-attachment: fixed;
   backdrop-filter: blur(10px);

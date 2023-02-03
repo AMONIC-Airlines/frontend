@@ -2,6 +2,7 @@
   <div class="body">
     <headerVue />
     <div class="main">
+      <asideVue />
       <router-view></router-view>
     </div>
     <footerVue />
@@ -11,11 +12,13 @@
 <script>
 import homeVue from "./components/home.vue";
 import headerVue from "./components/header.vue";
+import asideVue from "./components/aside.vue";
 import footerVue from "./components/footer.vue";
 
 export default {
   components: {
     headerVue,
+    asideVue,
     footerVue,
     homeVue,
   },
@@ -84,6 +87,7 @@ export default {
 
 .main {
   display: flex;
+  height: 90vh;
   flex-direction: row;
   justify-content: space-between;
 }

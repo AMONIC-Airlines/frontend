@@ -11,13 +11,13 @@
         <a class="side__item_l" href="#/schedule">Расписание</a>
       </li>
       <li class="side__item_l">
-        <a class="side__item_l" href="#">Забронировать билет</a>
+        <a class="side__item_l" href="#/booking">Забронировать билет</a>
       </li>
       <li class="side__item_l">
-        <a class="side__item_l" href="#">Регистрация на рейс</a>
+        <a class="side__item_l" href="#/register_flight">Регистрация на рейс</a>
       </li>
       <li class="side__item_l">
-        <a class="side__item_l" href="#">Дополнительные услуги</a>
+        <a class="side__item_l" href="#/register_flight/additional_service">Дополнительные услуги</a>
       </li>
       <li class="side__item_l">
         <a class="side__item_l" href="#">Техническая поддержка</a>

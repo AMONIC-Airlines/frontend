@@ -57,7 +57,7 @@ export default {
 
 .body {
   font-family: Helvetica;
-  background-image: url(./images/airport_dark.jpg);
+  background-image: url(./images/airport.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

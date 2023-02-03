@@ -6,9 +6,9 @@
   <table class="table">
     <tbody>
       <tr>
-        <td>Время</td>
-        <td>Из</td>
-        <td>Куда</td>
+        <th>Время</th>
+        <th>Из</th>
+        <th>Куда</th>
       </tr>
       <tr v-for="schedule in schedules">
         <td>{{ schedule.time }}</td>

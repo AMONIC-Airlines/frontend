@@ -10,9 +10,8 @@
       <label id="departure_time"><input type="date" /><span></span></label>
       <div class="item_desc">ПАССАЖИРЫ</div>
       <label id="passenger_number"><input class="info_input" type="text" /><span>i.e. 1</span></label>
-      <input type="checkbox" id="business_class" name="business_class" value="Bike" />
-      <label for="vehicle1"> I have a bike</label><br>
-      <input type="submit" value="ПОДТВЕРДИТЬ" />
+      <label id="business_class"><input type="checkbox" /> Business Class</label><br>
+      <input type="submit" class="submit_btn" value="ПОДТВЕРДИТЬ" />
     </div>
   </div>
 </template>

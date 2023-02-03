@@ -8,11 +8,11 @@
     <table class="table">
       <tbody>
         <tr>
-          <td>Рейс</td>
-          <td>Время</td>
-          <td>Из</td>
-          <td>Куда</td>
-          <td></td>
+          <th>Рейс</th>
+          <th>Время</th>
+          <th>Из</th>
+          <th>Куда</th>
+          <th></th>
         </tr>
         <tr v-for="schedule in filteredFlight">
           <td>{{ schedule.flight }}</td>

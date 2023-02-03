@@ -6,7 +6,7 @@
     <table class="table">
       <tbody>
         <tr>
-          <td><a >Услуга</a></td>
+          <td>Услуга</td>
           <td>Время</td>
           <td>Из</td>
           <td>Куда</td>

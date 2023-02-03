@@ -71,16 +71,19 @@ export default {
 
 .body {
   font-family: Helvetica;
-  background-image: url(./images/airport.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.05),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url(./images/airport.jpg);
 }
 
 .main {
   display: flex;
-  height: 100vh;
   flex-direction: row;
   justify-content: space-between;
 }
